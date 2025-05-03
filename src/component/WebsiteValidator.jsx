@@ -1,9 +1,10 @@
 import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { FaUserSecret } from 'react-icons/fa';
-
+import { useNavigate } from 'react-router-dom';
 
 const WebsiteValidator = () => {
+    const navigate = useNavigate();
   return (
     <div className="bg-[#0E0E2C] text-white">
       <div className="w-full bg-[#f8f8f8] text-[#0E0E2C] py-3 overflow-x-auto">
@@ -13,11 +14,11 @@ const WebsiteValidator = () => {
               <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
           </button>
-          <a href="#" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">AMAZON SCAMS</a>
-          <a href="#" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">SOCIAL SECURITY SCAMS</a>
-          <a href="#" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">PAYPAL SCAMS</a>
-          <a href="#" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">BITCOIN SCAMS</a>
-          <a href="#" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">DISCORD SCAMS</a>
+          <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=G4YFYCCNUSENA23B" target="_blank" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">AMAZON SCAMS</a>
+          <a href="https://faq.whatsapp.com/2286952358121083" target="_blank" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">WHATSAPP SCAMS</a>
+          <a href="https://www.paypal.com/us/cshelp/article/what-are-common-scams-and-how-do-i-spot-them-help201" target="_blank" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">PAYPAL SCAMS</a>
+          <a href="https://dfpi.ca.gov/consumers/crypto/crypto-scam-tracker/#:~:text=Crypto%20Blackmail%20Scam%20%E2%80%93%20Scammer%20sends,victim%20pays%20them%20in%20cryptocurrency." target="_blank" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">BITCOIN SCAMS</a>
+          <a href="https://discord.com/safety/understanding-and-avoiding-common-scams" target="_blank" className="flex-shrink-0 hover:text-blue-700 transition-colors whitespace-nowrap">DISCORD SCAMS</a>
           <button className="flex-shrink-0 flex items-center justify-center p-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -55,9 +56,13 @@ const WebsiteValidator = () => {
               placeholder="Enter website here" 
               className="flex-grow py-3 sm:py-4 px-4 sm:px-6 text-gray-800 focus:outline-none text-base md:text-lg border-b sm:border-b-0"
             />
-            <button className="bg-[#63C1E8] hover:bg-[#4BA7D0] text-[#0E0E2C] font-bold py-3 px-6 sm:px-8 md:px-10 transition-colors duration-300 text-sm md:text-base">
-              SEARCH
+            <button
+            onClick={() => navigate('/scanner')}
+            className="bg-[#63C1E8] cursor-pointer hover:bg-[#4BA7D0] text-[#0E0E2C] font-bold py-3 px-6 sm:px-8 md:px-10 transition-colors duration-300 text-sm md:text-base"
+            >
+            SEARCH
             </button>
+
           </div>
         </div>
 

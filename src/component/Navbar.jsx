@@ -9,42 +9,46 @@ const Navbar = () => {
     <header className="bg-[#0E0E2C] text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <div className="flex items-center space-x-3">
-            
-          <span className="text-xl font-bold tracking-tight flex justify-center items-center gap-2">
+        <div className="flex items-center space-x-3">
+        <span
+            onClick={() => window.location.reload()}
+            className="text-xl font-bold tracking-tight flex justify-center items-center gap-2 cursor-pointer"
+        >
             <FaUserSecret className="text-red-600 w-6 h-6" />
             Scam Shield
-            </span>
-          </div>
+        </span>
+        </div>
+
 
           <nav className="hidden md:flex items-center space-x-8">
             <a href="/validator" className="font-medium hover:text-[#63C1E8] transition-colors duration-200">
               VALIDATOR
             </a>
             <div className="relative group">
-              <a href="/scams" className="font-medium hover:text-[#63C1E8] transition-colors duration-200 flex items-center">
+              <div className="font-medium hover:text-[#63C1E8]  cursor-pointer transition-colors duration-200 flex items-center">
+
                 SCAMS
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </a>
+              </div>
               <div className="absolute left-0 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                <a href="/scams/amazon" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=G4YFYCCNUSENA23B"  target='_blank' className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                   Amazon Scams
                 </a>
-                <a href="/scams/paypal" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                <a href="https://www.paypal.com/us/cshelp/article/what-are-common-scams-and-how-do-i-spot-them-help201" target='_blank'  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                   PayPal Scams
                 </a>
-                <a href="/scams/bitcoin" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                <a href="https://dfpi.ca.gov/consumers/crypto/crypto-scam-tracker/#:~:text=Crypto%20Blackmail%20Scam%20%E2%80%93%20Scammer%20sends,victim%20pays%20them%20in%20cryptocurrency." target='_blank'  className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
                   Bitcoin Scams
                 </a>
-                <a href="/scams/all" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
-                  View All Scams
+                <a href="https://faq.whatsapp.com/2286952358121083" target='_blank' className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">
+                  WhatsApp Scams
                 </a>
               </div>
             </div>
-            <a href="/report" className="font-medium hover:text-[#63C1E8] transition-colors duration-200">
-              REPORT A SCAM
+            <a href="/scanner" className="font-medium hover:text-[#63C1E8] transition-colors duration-200">
+              SCAM SCANNER
             </a>
             <a href="/contact" className="font-medium hover:text-[#63C1E8] transition-colors duration-200">
               CONTACT
@@ -101,14 +105,14 @@ const Navbar = () => {
                   SCAMS
                 </a>
                 <div className="pl-4 mt-1 flex flex-col space-y-1 text-sm text-gray-300">
-                  <a href="/scams/amazon" className="py-1 hover:text-[#63C1E8]">Amazon Scams</a>
-                  <a href="/scams/paypal" className="py-1 hover:text-[#63C1E8]">PayPal Scams</a>
-                  <a href="/scams/bitcoin" className="py-1 hover:text-[#63C1E8]">Bitcoin Scams</a>
-                  <a href="/scams/all" className="py-1 hover:text-[#63C1E8]">View All Scams</a>
+                  <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=G4YFYCCNUSENA23B" target='_blank' className="py-1 hover:text-[#63C1E8]">Amazon Scams</a>
+                  <a href="https://www.paypal.com/us/cshelp/article/what-are-common-scams-and-how-do-i-spot-them-help201" target='_blank'  className="py-1 hover:text-[#63C1E8]">PayPal Scams</a>
+                  <a href="https://dfpi.ca.gov/consumers/crypto/crypto-scam-tracker/#:~:text=Crypto%20Blackmail%20Scam%20%E2%80%93%20Scammer%20sends,victim%20pays%20them%20in%20cryptocurrency."  target='_blank' className="py-1 hover:text-[#63C1E8]">Bitcoin Scams</a>
+                  <a href="https://faq.whatsapp.com/2286952358121083"  target='_blank' className="py-1 hover:text-[#63C1E8]">WhatsApp Scams</a>
                 </div>
               </div>
-              <a href="/report" className="py-2 font-medium hover:text-[#63C1E8] transition-colors duration-200">
-                REPORT A SCAM
+              <a href="/scanner" className="py-2 font-medium hover:text-[#63C1E8] transition-colors duration-200">
+                Scam Scanner
               </a>
               <a href="/contact" className="py-2 font-medium hover:text-[#63C1E8] transition-colors duration-200">
                 CONTACT
