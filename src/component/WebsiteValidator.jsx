@@ -6,7 +6,6 @@ import { FaUserSecret } from 'react-icons/fa';
 const WebsiteValidator = () => {
   return (
     <div className="bg-[#0E0E2C] text-white">
-      {/* Popular Scam Categories Slider */}
       <div className="w-full bg-[#f8f8f8] text-[#0E0E2C] py-3 overflow-x-auto">
         <div className="flex items-center justify-start md:justify-center px-4 md:px-0 space-x-4 md:space-x-8 text-xs sm:text-sm md:text-base font-medium min-w-max md:min-w-0 md:w-full">
           <button className="flex-shrink-0 flex items-center justify-center p-2">
@@ -27,7 +26,6 @@ const WebsiteValidator = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 text-center">
         <div className="mb-8 md:mb-12 flex justify-center">
         <FaUserSecret className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"/>
@@ -63,7 +61,6 @@ const WebsiteValidator = () => {
           </div>
         </div>
 
-        {/* Optional: Add to homescreen prompt */}
         <div className="mt-6 md:mt-8 text-gray-300 px-4">
           <p className="text-sm md:text-base">Save this page on your device home screen to have it handy next time you buy stuff online</p>
         </div>

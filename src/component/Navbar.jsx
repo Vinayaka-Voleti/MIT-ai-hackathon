@@ -9,7 +9,6 @@ const Navbar = () => {
     <header className="bg-[#0E0E2C] text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          {/* Logo */}
           <div className="flex items-center space-x-3">
             
           <span className="text-xl font-bold tracking-tight flex justify-center items-center gap-2">
@@ -18,7 +17,6 @@ const Navbar = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="/validator" className="font-medium hover:text-[#63C1E8] transition-colors duration-200">
               VALIDATOR
@@ -53,7 +51,6 @@ const Navbar = () => {
             </a>
           </nav>
 
-          {/* Search Bar */}
           <div className="hidden md:flex items-center">
             <div className="relative">
               <input
@@ -67,7 +64,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -83,7 +79,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-[#0E0E2C] border-t border-gray-700">
           <div className="container mx-auto px-4 py-3">

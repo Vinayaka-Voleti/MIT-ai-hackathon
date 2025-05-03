@@ -17,12 +17,10 @@ const MediaPartners = () => {
   return (
     <section className="bg-white py-6 sm:py-8 border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Optional Banner Message */}
         <div className="text-center mb-4 sm:mb-6 text-gray-700">
           <p className="text-sm md:text-base">Save this page on your device home screen to have it handy next time you buy stuff online</p>
         </div>
         
-        {/* Media Logos */}
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12">
           {mediaLogos.map((logo, index) => (
             <div key={index} className={`${logo.width.replace('w-', 'w-') === 'w-24' ? 'w-16 sm:w-20 md:w-24' : 

@@ -6,37 +6,43 @@ const ScamCategories = () => {
       id: 1,
       title: "Online Shopping Scams",
       description: "Fake online stores, counterfeit products, non-delivery of paid items",
-      icon: "🛒"
+      icon: "🛒",
+      url: "https://www.fdacs.gov/Consumer-Resources/Scams-and-Fraud/Online-Shopping-Scams"
     },
     {
       id: 2,
       title: "Investment Scams",
       description: "Pyramid schemes, fake crypto platforms, fraudulent investment opportunities",
-      icon: "💰"
+      icon: "💰",
+      url: "https://www.investor.gov/protect-your-investments/fraud/types-fraud/investment-scams"
     },
     {
       id: 3,
       title: "Phishing Attacks",
       description: "Fake emails, messages, and websites designed to steal personal information",
-      icon: "🎣"
+      icon: "🎣",
+      url: "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity/phishing"
     },
     {
       id: 4,
       title: "Identity Theft",
       description: "Unauthorized use of personal information for financial gain",
-      icon: "🔒"
+      icon: "🔒",
+      url: "https://www.identitytheft.gov"
     },
     {
       id: 5,
       title: "Tech Support Scams",
       description: "Fraudsters posing as tech support to access your devices or accounts",
-      icon: "💻"
+      icon: "💻",
+      url: "https://www.ftc.gov/news-events/topics/identity-theft-and-data-security/tech-support-scams"
     },
     {
       id: 6,
       title: "Romance Scams",
       description: "Fake online relationships used to extract money from victims",
-      icon: "❤️"
+      icon: "❤️",
+      url: "https://www.consumer.ftc.gov/articles/what-you-need-know-about-romance-scams"
     }
   ];
 
@@ -55,14 +61,18 @@ const ScamCategories = () => {
           {categories.map(category => (
             <div 
               key={category.id} 
-              className="bg-gray-50 rounded-lg p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-gray-50 rounded-lg p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
+              onClick={() => window.open(category.url, '_blank', 'noopener,noreferrer')}
             >
               <div className="text-3xl sm:text-4xl mb-3 md:mb-4">{category.icon}</div>
               <h3 className="text-lg sm:text-xl font-bold text-[#0E0E2C] mb-1 sm:mb-2">{category.title}</h3>
               <p className="text-gray-600 text-sm sm:text-base">{category.description}</p>
               <a 
-                href={`/scams/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                href={category.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-3 sm:mt-4 inline-block text-[#63C1E8] hover:text-[#4BA7D0] font-medium text-sm sm:text-base"
+                onClick={(e) => e.stopPropagation()}
               >
                 Learn more →
               </a>
@@ -72,7 +82,9 @@ const ScamCategories = () => {
 
         <div className="text-center mt-8 sm:mt-10 md:mt-12">
           <a 
-            href="/scams/all" 
+            href="https://consumer.ftc.gov/scams"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#0E0E2C] text-white py-2 sm:py-3 px-6 sm:px-8 rounded-md hover:bg-[#1A1A4A] transition-colors duration-300 inline-flex items-center text-sm sm:text-base"
           >
             View All Scam Categories
